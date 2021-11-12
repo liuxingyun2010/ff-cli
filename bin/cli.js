@@ -1,30 +1,33 @@
 #! /usr/bin/env node
 
-const program = require('commander')
-const package = require('../package.json')
 const chalk = require('chalk')
-const ora = require('ora')
-
-const spinner = ora(chalk.green('Loading Template...'))
+const program = require('commander')
+const create = require('../lib/create')
+const figlet = require('figlet')
 
 program
-  .version(package.version)
-  .command('init <name>')
-  .description('create a new project')
-  .action(name => {
-    // console.log('create a new project: ' + name)
-    // console.log('create a new project: ' + chalk.bold(name))
-    // console.log('create a new project: ' + chalk.cyan(name))
-    console.log('create a new project: ' + chalk.green(name))
-    // console.log('create a new project: ' + chalk.bgRed(name))
-
-    spinner.start()
-
-    setTimeout(() => {
-      spinner.stop()
-      spinner.succeed('Loading Success')
-    }, 5000)
-    
+  .command('create <app-name>')
+  .description('create a new app')
+  .option('-f --force', 'overwrite target directory if it exists')
+  .action((name, options) => {
+    create(name, options)
   })
 
-program.parse()
+program
+  .version(`v${require('../package.json').version}`, '-v --version')
+  .usage('<command> [option]')
+
+program
+  .on('--help', () => {
+    console.log(`\r\n` + figlet.textSync('lxy', {
+      font: 'Ghost',
+      width: 80,
+      whitespaceBreak: true,
+      horizontalLayout:'default',
+      verticalLayout: 'default'
+    }))
+
+    console.log(`\r\nRun ${chalk.cyan('xy <commander> --help')} for detailed usage of given command`)
+  })
+
+program.parse(process.argv)
