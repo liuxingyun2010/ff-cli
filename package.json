@@ -27,7 +27,11 @@
     "registry": "https://registry.npmjs.org/"
   },
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ejs": "^3.1.6",
+    "fs-extra": "^10.0.0",
+    "ora": "5.4.1",
     "commander": "^8.3.0",
     "cross-spawn": "^7.0.3",
     "download-git-repo": "^3.0.2",
@@ -36,11 +40,5 @@
     "git-cz": "^4.8.0",
     "inquirer": "^8.2.0",
     "np": "^7.5.0"
-  },
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "ejs": "^3.1.6",
-    "fs-extra": "^10.0.0",
-    "ora": "5.4.1"
   }
 }
