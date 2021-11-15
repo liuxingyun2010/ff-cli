@@ -1,6 +1,6 @@
 {
   "name": "ffe-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "simple frontend cli",
   "main": "index.js",
   "bin": {
@@ -29,16 +29,16 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.2",
-    "ejs": "^3.1.6",
-    "fs-extra": "^10.0.0",
-    "ora": "5.4.1",
     "commander": "^8.3.0",
     "cross-spawn": "^7.0.3",
     "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.6",
     "execa": "^5.1.1",
     "figlet": "^1.5.2",
+    "fs-extra": "^10.0.0",
     "git-cz": "^4.8.0",
     "inquirer": "^8.2.0",
-    "np": "^7.5.0"
+    "np": "^7.5.0",
+    "ora": "5.4.1"
   }
 }
