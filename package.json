@@ -1,10 +1,10 @@
 {
-  "name": "xy-cli",
+  "name": "ffe-cli",
   "version": "1.0.1",
   "description": "simple frontend cli",
   "main": "index.js",
   "bin": {
-    "xy": "./bin/cli.js"
+    "ffe": "./bin/cli.js"
   },
   "scripts": {
     "commit": "git-cz",
@@ -15,7 +15,7 @@
     "lib"
   ],
   "keywords": [
-    "xy-cli",
+    "ffe-cli",
     "脚手架"
   ],
   "author": {
